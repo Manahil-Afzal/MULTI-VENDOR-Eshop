@@ -2,7 +2,7 @@ import React from 'react'
 import CheckoutSteps from '../components/Checkout/CheckoutSteps'
 import Footer from '../components/Layout/Footer'
 import Header from '../components/Layout/Header'
-import Payment from "../components/Payment/Payment";
+import PaymentPage from '../components/payment/payment'
 
 const PaymentPage=()=> {
  return (
