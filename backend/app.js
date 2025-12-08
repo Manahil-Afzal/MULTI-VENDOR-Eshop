@@ -8,7 +8,7 @@ const cors = require("cors");
 const path = require("path");
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: "https://multi-vendor-eshop.vercel.app",
   credentials: true,
 }));
 
