@@ -40,7 +40,7 @@ router.post("/create-shop", async (req, res, next) => {
       { expiresIn: "300s" }
     );
 
-    const activationUrl = `http://localhost:5173/seller/activation/${activationToken}`;
+    const activationUrl = `https://multi-vendor-e-shop-frontend.vercel.app/seller/activation/${activationToken}`;
        try {
            await sendMail({
              email: seller.email,

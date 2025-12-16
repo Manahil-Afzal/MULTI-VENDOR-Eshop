@@ -39,7 +39,7 @@ router.post("/create-user", async (req, res, next) => {
     const activationToken = jwt.sign( {id:user._id}, process.env.ACTIVATION_SECRET, {
       expiresIn: "300s",
     });
-    const activationUrl = `http://localhost:5173/activation/${activationToken}`;
+    const activationUrl = `https://multi-vendor-e-shop-frontend.vercel.app/activation/${activationToken}`;
 
     try {
       await sendMail({
