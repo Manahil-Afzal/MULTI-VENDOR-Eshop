@@ -57,7 +57,6 @@ import { AdminDashboardPage, AdminDashboardUsers, AdminDashboardSellers, AdminDa
 import ProtectedAdminRoute from "./routes/ProtectedAdminRoute";
 import ShopActivationPage from "./components/Shop/ShopActivationPage.jsx";
 
-
 const App = () => {
   const { loading, isAuthenticated } = useSelector((state) => state.user);
   const { isLoading, isSeller } = useSelector((state) => state.seller);
