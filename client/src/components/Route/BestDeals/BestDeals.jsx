@@ -15,13 +15,14 @@ useEffect(()=>{
 },[dispatch]);
 
   useEffect(() => {
-    if (allProducts.length > 0) {
-      const firstFive = allProducts.slice(0, 5);
+    if (allProducts?.length > 0) {
+      const firstFive = allProducts?.slice(0, 5);
       setData(firstFive);
     }
   }, [allProducts]);
 
 console.log(allProducts);
+
   return (
     <div>
       <div className={`${styles.section}`}>

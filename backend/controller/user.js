@@ -36,7 +36,7 @@ router.post("/create-user", async (req, res, next) => {
       },
     };
 
-    const activationToken = jwt.sign( {id:user._id}, process.env.ACTIVATION_SECRET, {
+    const activationToken = jwt.sign(user, process.env.ACTIVATION_SECRET, {
       expiresIn: "300s",
     });
     const activationUrl = `https://multi-vendor-e-shop-frontend.vercel.app/activation/${activationToken}`;
@@ -137,7 +137,7 @@ router.get(
       }
       res.status(200).json({
         success: true,
-        user,
+         user,
       });
     } catch (error) {
       return next(new ErrorHandler(error.message, 500));
@@ -440,7 +440,7 @@ router.delete(
 
       const imageId = user.avatar.public_id;
 
-      await cloudinary.v2.uploader.destroy(imageId);
+      await cloudinary.uploader.destroy(imageId);
 
       await User.findByIdAndDelete(req.params.id);
 
