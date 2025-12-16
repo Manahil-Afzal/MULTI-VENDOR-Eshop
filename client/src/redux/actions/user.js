@@ -91,6 +91,7 @@ export const updateUserAddress =
           address1,
           address2,
           addressType,
+           zipCode
         },
         { withCredentials: true }
       );

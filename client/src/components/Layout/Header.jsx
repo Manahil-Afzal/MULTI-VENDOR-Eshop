@@ -51,7 +51,7 @@ const Header = ({ activeHeading, onSearchActive }) => {
   const handleSearchChange = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
-  
+
     const filteredProducts = allProducts && allProducts.filter((product) =>
       product.name?.toLowerCase().includes(term.toLowerCase())
     );
@@ -88,7 +88,7 @@ const Header = ({ activeHeading, onSearchActive }) => {
           </Link>
 
 
-          <div className="relative w-full max-w-sm">
+          <div className="relative hidden lg:block w-full max-w-sm">
             <input
               type="text"
               placeholder="Search Product......"
@@ -124,13 +124,14 @@ const Header = ({ activeHeading, onSearchActive }) => {
             )}
           </div>
 
-          <div className={`${styles.button}`}>
-            <Link to={`${isSeller ? '/dashboard' : '/shop-create'}`}>
-              <button className="flex items-center gap-1 bg-[#F2A533] text-white cursor-pointer px-3 py-1 rounded-md">
-                {isSeller ? " Dashboard" : "Become Seller"} <IoArrowForward />
+          
+            <Link to={`${isSeller ? '/dashboard' : '/shop-create'}`} 
+               className={`${styles.button} cursor-pointer hidden lg:block `}>
+              <button className="flex text-amber-50 gap-1 cursor-pointer">
+                {isSeller ? " Dashboard" : "Become Seller"} <IoArrowForward className="mt-1"/>
               </button>
             </Link>
-          </div>
+       
 
           {/* Mobile icons */}
           <div className="flex items-center gap-4 sm:hidden">
@@ -168,12 +169,12 @@ const Header = ({ activeHeading, onSearchActive }) => {
                 }`}
             />
           </button>
-          {dropDown ? ( 
+          {dropDown ? (
             <DropDown
               categoriesData={categoriesData}
               setDropDown={setDropDown}
             />
-          ) :null}
+          ) : null}
         </div>
 
         {/* Navbar Center */}
@@ -219,18 +220,25 @@ const Header = ({ activeHeading, onSearchActive }) => {
 
       {/* Mobile Sidebar */}
       {openSidebar && (
-        <div className="800px:hidden fixed top-0 left-0 w-full h-screen bg-[#0000005e] z-20">
+        <div className="lg:hidden fixed top-0 left-0 w-full h-screen bg-[#0000005e] z-20">
           <div className="w-[50%] bg-white h-full shadow-md p-5 relative overflow-y-scroll">
             <RxCross1
               size={25}
               className="absolute top-4 right-4 cursor-pointer text-[#417fa0]"
               onClick={() => setOpenSidebar(false)}
             />
-            <div className="mb-11 mt-20 ">
-              <h2 className="text-xl font-bold ">Menu</h2>
+            <div className="mt-10">
+              <input
+                type="text"
+                placeholder="Search Product......"
+                value={searchTerm}
+                onChange={handleSearchChange}
+                className="h-[35px] w-full px-4 pr-20  bg-white border-2 border-[#417fa0] rounded-md text-[#123243] placeholder-[#417fa0] focus:outline-none"
+              />
+            </div>
+            <div className="mt-5 mb-5">
               <Navbar active={activeHeading} />
             </div>
-
 
             <div className="flex items-center justify-between mt-6">
               <div
@@ -243,14 +251,17 @@ const Header = ({ activeHeading, onSearchActive }) => {
                 </span>
               </div>
 
-              <Link to="/shop-create">
-                <button className="bg-[#417fa0] text-white px-6 py-2  ml-13 rounded-md flex items-center gap-2">
-                  Become Seller <IoArrowForward />
-                </button>
-              </Link>
-            </div>
+            
+                <Link to={`${isSeller ? '/dashboard' : '/shop-create'} `} 
+               className={`${styles.button} cursor-pointer `}>
+              <button className="flex text-amber-50 gap-1 cursor-pointer">
+                {isSeller ? " Dashboard" : "Become Seller"} <IoArrowForward className="mt-1"/>
+              </button>
+            </Link>
+              </div>
+  
 
-            <div className="flex flex-col items-center mt-8">
+            <div className="flex flex-col size-20 items-center mt-8">
               <Link
                 to={isAuthenticated ? "/profile" : "/login"}
                 className="flex flex-col items-center"
@@ -258,11 +269,11 @@ const Header = ({ activeHeading, onSearchActive }) => {
                 {isAuthenticated && user?.avatar ? (
                   <img
                     src={`${user.avatar.url}`}
-                    className="w-[60px] h-[60px] rounded-full border-[3px] border-[#417fa0]"
+                    className="w-[50px] h-[50px] rounded-full border-[3px] border-[#417fa0]"
                     alt="Profile"
                   />
                 ) : (
-                  <CgProfile size={40} />
+                  <CgProfile size={30} />
                 )}
                 <span className="text-[#417fa0] text-sm mt-2">
                   {isAuthenticated ? "Go to Profile" : "Login / Sign Up"}

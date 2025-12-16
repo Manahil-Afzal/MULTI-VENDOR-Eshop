@@ -564,7 +564,6 @@ const Address = () => {
 
   const handleSubmit = async (e) => {
         e.preventDefault();
-    
       if (addressType === "" || country === "" || city === "") {
         toast.error("Please fill all the fields!");
     } else {
@@ -586,7 +585,6 @@ const Address = () => {
       setAddress2("");
       setZipCode("");
       setAddressType("");
-      window.location.reload();
     }
   };
 
