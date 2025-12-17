@@ -124,14 +124,16 @@ const Header = ({ activeHeading, onSearchActive }) => {
             )}
           </div>
 
-          
-            <Link to={`${isSeller ? '/dashboard' : '/shop-create'}`} 
-               className={`${styles.button} cursor-pointer hidden lg:block `}>
-              <button className="flex text-amber-50 gap-1 cursor-pointer">
-                {isSeller ? " Dashboard" : "Become Seller"} <IoArrowForward className="mt-1"/>
-              </button>
-            </Link>
-       
+
+          <Link
+            to={isSeller ? "/dashboard" : "/shop-create"}
+            className={`${styles.button} hidden lg:flex items-center gap-1 text-amber-50`}
+          >
+            {isSeller ? "Dashboard" : "Become Seller"}
+            <IoArrowForward className="mt-0.5" />
+          </Link>
+
+
 
           {/* Mobile icons */}
           <div className="flex items-center gap-4 sm:hidden">
@@ -251,15 +253,15 @@ const Header = ({ activeHeading, onSearchActive }) => {
                 </span>
               </div>
 
-            
-                <Link to={`${isSeller ? '/dashboard' : '/shop-create'} `} 
-               className={`${styles.button} cursor-pointer `}>
-              <button className="flex text-amber-50 gap-1 cursor-pointer">
-                {isSeller ? " Dashboard" : "Become Seller"} <IoArrowForward className="mt-1"/>
-              </button>
-            </Link>
-              </div>
-  
+
+              <Link to={`${isSeller ? '/dashboard' : '/shop-create'} `}
+                className={`${styles.button} cursor-pointer `}>
+                <button className="flex text-amber-50 gap-1 cursor-pointer">
+                  {isSeller ? " Dashboard" : "Become Seller"} <IoArrowForward className="mt-1" />
+                </button>
+              </Link>
+            </div>
+
 
             <div className="flex flex-col size-20 items-center mt-8">
               <Link
