@@ -65,8 +65,7 @@ router.post(
     try {
       const shopId = req.body.shopId;
       const shop = await Shop.findById(shopId);
-      console.log("Received shopId:", req.body.shopId);
-
+      
       if (!shop) {
         return next(new ErrorHandler("Shop Id is invalid", 400));
       } else {

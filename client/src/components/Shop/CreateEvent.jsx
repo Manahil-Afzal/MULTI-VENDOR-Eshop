@@ -91,6 +91,11 @@ const CreateEvent = () => {
     newForm.append("start_Date", startDate.toISOString());
     newForm.append("Finish_Date", endDate.toISOString());
     dispatch(createEvent(newForm));
+    console.log("Shop ID (sellers._id):", sellers._id);
+console.log("Images to upload:", images);
+console.log("Start Date:", startDate);
+console.log("End Date:", endDate);
+
   };
 
   return (

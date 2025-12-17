@@ -45,7 +45,7 @@ const UserInbox = () => {
       setMessages((prev) => [...prev, arrivalMessage]);
   }, [arrivalMessage, currentChat]);
 
-  useEffect(() => {    
+  useEffect(() => {
     const getConversation = async () => {
       try {
         const response = await axios.get(
@@ -73,26 +73,26 @@ const UserInbox = () => {
     }
   }, [user]);
 
- const onlineCheck = (chat) => {
-     if (!chat?.members) return false;
-     if (!onlineUsers || !Array.isArray(onlineUsers)) return false;
- 
-     const chatMemberId = chat.members.find((id) => id !== user._id);
- 
-     const isOnline = onlineUsers.some((u) => u.userId === chatMemberId);
- 
-     return isOnline;
-   };
- 
-   useEffect(() => {
-     if (currentChat && Array.isArray(onlineUsers)) {
-       const otherUserId = currentChat.members.find((id) => id !== user._id);
- 
-       const isOnline = onlineUsers.some((u) => u.userId === otherUserId);
- 
-       setActiveStatus(isOnline);
-     }
-   }, [currentChat, onlineUsers]);
+  const onlineCheck = (chat) => {
+    if (!chat?.members) return false;
+    if (!onlineUsers || !Array.isArray(onlineUsers)) return false;
+
+    const chatMemberId = chat.members.find((id) => id !== user._id);
+
+    const isOnline = onlineUsers.some((u) => u.userId === chatMemberId);
+
+    return isOnline;
+  };
+
+  useEffect(() => {
+    if (currentChat && Array.isArray(onlineUsers)) {
+      const otherUserId = currentChat.members.find((id) => id !== user._id);
+
+      const isOnline = onlineUsers.some((u) => u.userId === otherUserId);
+
+      setActiveStatus(isOnline);
+    }
+  }, [currentChat, onlineUsers]);
 
   // get messages
   useEffect(() => {
@@ -237,7 +237,7 @@ const UserInbox = () => {
             conversations.map((item, index) => (
               <MessageList
                 data={item}
-                key={index}
+                key={item._id}
                 index={index}
                 setOpen={setOpen}
                 setCurrentChat={setCurrentChat}
@@ -304,7 +304,7 @@ const MessageList = ({
     getUser();
   }, [me, data]);
 
- 
+
 
   return (
     <div
@@ -320,7 +320,7 @@ const MessageList = ({
     >
       <div className="relative">
         <img
-           src={ `${userData?.avatar?.url}`}
+          src={`${userData?.avatar?.url}`}
           alt=""
           className="w-[50px] h-[50px] rounded-full"
         />
@@ -360,13 +360,13 @@ const SellerInbox = ({
       <div className="w-full flex p-3 items-center justify-between bg-slate-200">
         <div className="flex">
           <img
-            src={ `${userData?.avatar?.url}`}
+            src={`${userData?.avatar?.url}`}
             alt=""
             className="w-[60px] h-[60px] rounded-full"
           />
           <div className="pl-3">
             <h1 className="text-[18px] font-[600]">{userData?.name}</h1>
-            <h1>{activeStatus ? "online"  : "offline"}</h1>
+            <h1>{activeStatus ? "online" : "offline"}</h1>
           </div>
         </div>
         <AiOutlineArrowRight
@@ -381,20 +381,21 @@ const SellerInbox = ({
         {messages &&
           messages.map((item, index) => (
             <div
+                key={item._id || item.createdAt}
               className={`flex w-full my-2 ${item.sender === sellerId ? "justify-end" : "justify-start"
                 }`}
               ref={scrollRef}
             >
               {item.sender !== sellerId && (
                 <img
-                  src={ `${userData?.avatar?.url}`}
+                  src={`${userData?.avatar?.url}`}
                   className="w-[40px] h-[40px] rounded-full mr-3"
                   alt=""
                 />
               )}
               {item.images && (
                 <img
-                  src={ `${item?.images?.url}`}
+                  src={`${item?.images?.url}`}
                   className="w-[300px] h-[300px] object-cover rounded-[10px] ml-2 mb-2"
                 />
               )}

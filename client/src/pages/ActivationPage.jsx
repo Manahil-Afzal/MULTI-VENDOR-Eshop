@@ -16,7 +16,6 @@ const ActivationPage = () => {
            const res = await axios.post(`${server}/user/activation`, {
               activation_token: token,
            })
-           console.log(res.data);
          } catch (error) {
             console.error(error.response.data);
             setError(true);

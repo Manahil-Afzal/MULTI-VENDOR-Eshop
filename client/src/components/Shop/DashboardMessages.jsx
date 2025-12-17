@@ -224,11 +224,7 @@ const onlineCheck = (chat) => {
   }, [messages]);
 
   useEffect(() => {
-    if (userData) {
-      console.log("User Data:", userData);
-      console.log("User Avatar:", userData.avatar);
-      console.log("Full Avatar URL:", `${backend_url}/uploads/${userData.avatar}`);
-    }
+    if (userData) {}
   }, [userData]);
 
 
@@ -303,23 +299,6 @@ const MessageList = ({
   };
   const [active, setActive] = useState(0);
 
-  // useEffect(() => {
-  //   const userId = data.members.find((user) => user != me);
-
-  //   const getUser = async () => {
-  //     try {
-  //       const res = await axios.get(`${server}/user/user-info/${userId}`);
-  //       setUser(res.data.user);
-  //       console.log("USER DATA:", res.data.user);
-  //       console.log("USER AVATAR:", res.data.user?.avatar);
-
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   getUser();
-  // }, [me, data]);
-
  useEffect(() => {
   const userId = data.members.find((member) => member !== me);
 
@@ -347,7 +326,7 @@ const MessageList = ({
     <div
       className={`w-full flex p-3 px-3 ${active === index ? "bg-[#00000010]" : "bg-transparent"
         }  cursor-pointer`}
-      onClick={(e) =>
+         onClick={(e) =>
         setActive(index) ||
         handleClick(data._id) ||
         setCurrentChat(data) ||
@@ -422,6 +401,7 @@ const SellerInbox = ({
           messages.map((item, index) => {
             return (
               <div
+               key={item._id}
                 className={`flex w-full my-2 ${item.sender === sellerId ? "justify-end" : "justify-start"
                   }`}
                 ref={scrollRef}

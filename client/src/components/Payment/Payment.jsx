@@ -438,7 +438,6 @@ const CartData = ({ orderData }) => {
   const [couponCode, setCouponCode] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Coupon applied:", couponCode);
   };
 
   const shipping = orderData?.shipping?.toFixed(2);

@@ -21,7 +21,7 @@ useEffect(()=>{
     }
   }, [allProducts]);
 
-console.log(allProducts);
+
 
   return (
     <div>

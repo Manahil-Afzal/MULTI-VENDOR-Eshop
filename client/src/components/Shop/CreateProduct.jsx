@@ -103,7 +103,6 @@ if (!sellers || !sellers._id) {
     newForm.append("discountPrice", discountPrice);
     newForm.append("stock", stock);
     newForm.append("shopId", sellers._id);
-
     dispatch(
       createProduct(newForm));
   };

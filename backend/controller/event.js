@@ -8,25 +8,29 @@ const ErrorHandler = require("../utils/ErrorHandler");
 const fs = require("fs");
 const { isSeller,  isAuthenticated, isAdmin } = require("../middleware/auth");
 const cloudinary = require("cloudinary");
+const event = require("../model/event");
 
 // create Event
 router.post(
   "/create-event",
+   upload.array("images"),
   catchAsyncErrors(async (req, res, next) => {
+      console.log("Backend route hit"); 
     try {
       const shopId = req.body.shopId;
+      console.log("ShopId received:", shopId, "Type:", typeof shopId);
       const shop = await Shop.findById(shopId);
+      console.log("Shop found:", shop);
+
       if (!shop) {
         return next(new ErrorHandler("ShopId is invalid!, 400"));
       } else {
         let images = [];
-
         if (typeof req.body.images === "string") {
           images.push(req.body.images);
         } else {
           images = req.body.images;
         }
-
         const imagesLinks = [];
 
         for (let i = 0; i < images.length; i++) {

@@ -44,7 +44,7 @@ const AllCoupons = () => {
   if (sellers && sellers._id) fetchCoupons();
 }, [sellers]);
 
-console.log(products);
+
 
   const handleSubmit = async (e) => {
   e.preventDefault();

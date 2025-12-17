@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../../styles/styles'
 
 const CheckoutSteps = ({active}) => {
-    console.log(active);
+
   return (
     <div className=' flex ml-35  justify-center'>
         <div className="w-[90%]  800:w-[50%] flex items-center flex-wrap ">
