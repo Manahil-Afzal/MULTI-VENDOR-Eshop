@@ -22,7 +22,7 @@ import { getAllOrdersOfUser } from "../../redux/actions/order";
 
 
 const ProfileContent = ({ active }) => {
-  const { user, error, updateAddressSuccessMessage } = useSelector((state) => state.user);
+  const { user, error, updateAddressSuccessMessage, deleteAddressSuccessMessage } = useSelector((state) => state.user);
   const [name, setName] = useState(user && user.name);
   const [email, setEmail] = useState(user && user.email);
   const [phoneNumber, setPhoneNumber] = useState(user && user.phoneNumber);
@@ -38,8 +38,13 @@ const ProfileContent = ({ active }) => {
     }
     if (updateAddressSuccessMessage) {
       toast.success(updateAddressSuccessMessage);
+      dispatch({ type: "clearMessages" }); 
     }
-  }, [error, updateAddressSuccessMessage]);
+     if (deleteAddressSuccessMessage) {
+    toast.success(deleteAddressSuccessMessage);
+    dispatch({ type: "deleteUserAddressReset" });
+  }
+  }, [error, updateAddressSuccessMessage, deleteAddressSuccessMessage]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -213,10 +218,6 @@ const UserAllOrders = () => {
     const {orders} = useSelector((state) => state.order);
     const dispatch = useDispatch();
 
-    // useEffect(() => {
-    //     dispatch(getAllOrdersOfUser(user._id));
-    // }, [dispatch, user]);
-
     useEffect(() => {
   if (user && user._id) {
     dispatch(getAllOrdersOfUser(user._id));
@@ -303,10 +304,6 @@ const AllRefundOrders = () => {
   const { user } = useSelector((state) => state.user);
   const { orders } = useSelector((state) => state.order);
   const dispatch = useDispatch();
-
-  // useEffect(() => {
-  //   dispatch(getAllOrdersOfUser(user._id));
-  // }, []);
 
   useEffect(() => {
   if (user && user._id) {
@@ -577,7 +574,6 @@ const Address = () => {
             zipCode
           )
         );
-      toast.success("Address saved successfully!");
       setOpen(false);
       setCountry("");
       setCity("");
@@ -591,7 +587,6 @@ const Address = () => {
   const handleDelete = (item) => {
         dispatch(deleteUserAddress(item._id));
   };
-
 
       return (
       <div className="w-full px-5">
