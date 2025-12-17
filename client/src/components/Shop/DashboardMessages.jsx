@@ -12,7 +12,7 @@ import  socketIO  from "socket.io-client";
 import { backend_url } from "../../server";
 
 
-const socket = socketIO("http://localhost:4000", {
+const socket = socketIO("https://mysocketserver-xhv2.onrender.com", {
   transports: ["websocket"],
 });
 

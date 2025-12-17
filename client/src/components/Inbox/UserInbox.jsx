@@ -11,7 +11,7 @@ import { TfiGallery } from "react-icons/tfi";
 import styles from "../../styles/styles";
 import { backend_url } from "../../server";
 
-const ENDPOINT = "http://localhost:4000";
+const ENDPOINT = "https://mysocketserver-xhv2.onrender.com";
 
 const socketId = socketIO(ENDPOINT, { transports: ["websocket"] });
 
