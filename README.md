@@ -24,13 +24,29 @@ Primary Goals:
 
 System Architecture:
 
-Layer	                           Technology	                               Notes
+Layer	       
 
-Frontend	                 React (likely Vite or CRA)	                Component-based UI
+Technology	  
 
-Backend	                   Node.js + Express	                            REST API
+Notes
 
-Database	                    MongoDB + Mongoose	            Flexible schema for users, shops, orders
+Frontend	       
+
+React (likely Vite or CRA)	  
+
+Component-based UI
+
+Backend	          
+
+Node.js + Express	     
+
+REST API
+
+Database	         
+
+MongoDB + Mongoose	  
+
+Flexible schema for users, shops, orders
 
 Authentication	            JWT (httpOnly cookies)	                   Role-based access
 
@@ -41,4 +57,5 @@ File Storage	                    Cloudinary	                           Product i
 Payments	                          Stripe	                             Secure checkout
 
 Realtime	                 Socket.io or similar	               (If implemented) Messaging/notifications
+
 
