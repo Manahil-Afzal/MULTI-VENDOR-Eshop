@@ -283,55 +283,57 @@ Vendor logs in
 
 Challenges & Solutions:
 
-Challenge	                             Solution	              Tradeoffs
+     .Challenge	                             Solution	              Tradeoffs
 
-Multi-vendor order tracking       Split orders per vendor           More complex cart logic
-
-
-Scalability of image uploads          Cloudinary                External cost dependency
+     . Multi-vendor order tracking       Split orders per vendor           More complex cart logic
 
 
-State complexity	Redux Boilerplate                         learning curve
+    .Scalability of image uploads          Cloudinary                      External cost dependency
 
 
-Payment security	Stripe + server logic                     Stripe fees apply
+     .State complexity	          Redux Boilerplate                         learning curve
 
 
-Role-based auth	JWT with middleware	                    Must handle token refresh
+     .Payment security	         Stripe + server logic                     Stripe fees apply
+
+
+     .Role-based auth	                     JWT with middleware	                    Must handle token refresh
 
 
 
-Best Practices:
+    Best Practices:
 
-. Secure authentication (bcrypt + JWT + httpOnly cookies)
-
-
-. Role-based access control middleware
+          . Secure authentication (bcrypt + JWT + httpOnly cookies)
 
 
-. Input validation on backend + frontend
+          . Role-based access control middleware
 
 
-. Use environment variables (no sensitive data in code)
+          . Input validation on backend + frontend
+ 
+
+          . Use environment variables (no sensitive data in code)
 
 
-. Pagination for product lists
+          . Pagination for product lists
 
 
-. MongoDB indexing for performance
+          . MongoDB indexing for performance
 
 
-Developer Experience:
 
-. Modular MVC folder structure (controllers, routes, models)
+     Developer Experience:
 
-. Reusable UI components
+          . Modular MVC folder structure (controllers, routes, models)
 
-. Central Redux store
+          . Reusable UI components
 
-. ESLint + Prettier config
+          . Central Redux store
 
-. Clear README with setup instructions
+          . ESLint + Prettier config
+
+          . Clear README with setup instructions
+
 
 
 
