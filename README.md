@@ -26,48 +26,6 @@ Primary Goals:
 6) Support coupon codes and basic promotion flows.
 
 
-flowchart TB
-    subgraph Client["Client Layer"]
-        Browser[Browser]
-        Mobile[Mobile Browser]
-    end
-    
-    subgraph Frontend["Frontend - React/Vite"]
-        Router[React Router]
-        Redux[Redux Store]
-        UI[UI Components]
-    end
-    
-    subgraph Backend["Backend - Express.js"]
-        API[API Routes]
-        Auth[Auth Middleware]
-        Controllers[Controllers]
-        Utils[Utilities]
-    end
-    
-    subgraph External["External Services"]
-        Cloudinary[Cloudinary CDN]
-        Stripe[Stripe API]
-        Email[SMTP Server]
-    end
-    
-    subgraph Data["Data Layer"]
-        MongoDB[(MongoDB)]
-    end
-    
-    Browser --> Router
-    Mobile --> Router
-    Router --> Redux
-    Redux --> UI
-    UI --> API
-    API --> Auth
-    Auth --> Controllers
-    Controllers --> MongoDB
-    Controllers --> Cloudinary
-    Controllers --> Stripe
-    Controllers --> Email
-    Controllers --> Utils
-
 
         . System Architecture:
 
@@ -377,6 +335,7 @@ Key User Flows:
           . ESLint + Prettier config
 
           . Clear README with setup instructions
+
 
 
 
