@@ -22,97 +22,111 @@ Primary Goals:
 
 6) Support coupon codes and basic promotion flows.
 
+
+
 System Architecture:
 
-Layer	                          Technology	                         Notes
+Layer	                                   Technology	                         Notes
 
-Frontend	     +         React (likely Vite or CRA)	      +       Component-based UI
+Frontend	             +         React (likely Vite or CRA)	     +       Component-based UI
 
-Backend	       +               Node.js + Express	          +          REST API
+Backend	               +               Node.js + Express	      +          REST API
 
-Database	     +             MongoDB + Mongoose	          +       Flexible schema for users, shops, orders
+Database	             +             MongoDB + Mongoose	        +       Flexible schema for users, shops, orders
 
-Authentication	+            JWT (httpOnly cookies)	      +             Role-based access
+Authentication       	+            JWT (httpOnly cookies)	      +             Role-based access
 
-State Mgmt	    +                    Redux	              +                 Frontend state
+State Mgmt	          +                    Redux	              +                 Frontend state
 
-File Storage	   +                 Cloudinary	            +               Product images
+File Storage	        +                 Cloudinary	            +               Product images
 
-Payments	      +                    Stripe	             +                Secure checkout
+Payments	            +                    Stripe	              +                Secure checkout
 
-Realtime	      +           Socket.io or similar	       +        (If implemented) Messaging/notifications
+Realtime	             +           Socket.io or similar	        +        (If implemented) Messaging/notifications
+
 
 
 Key Features: 
 
 Vendor Management
 
-. Vendor sign-up / shop creation
+    . Vendor sign-up / shop creation
 
-. Product CRUD with image uploads
+    . Product CRUD with image uploads
 
-. Inventory management
+    . Inventory management
 
-. Earnings overview dashboard
+    . Earnings overview dashboard
 
-. Coupon creation and management
+    . Coupon creation and management
 
-. Messaging inbox for buyers
+    . Messaging inbox for buyers
 
 
 
 Buyer Experience:
 
-. User registration and login
+    . User registration and login
 
-. Advanced product filters + search
+    . Advanced product filters + search
 
-. Shopping cart with persistent state via Redux
+    . Shopping cart with persistent state via Redux
 
-. Multi-step checkout process
+    . Multi-step checkout process
 
-. Order history and tracking
+    . Order history and tracking
 
-. Wishlist / favorites
+    . Wishlist / favorites
 
 
 
 Admin Capabilities:
 
-. Dashboard with platform analytics
+     . Dashboard with platform analytics
 
-. Vendor approval and management
+     . Vendor approval and management
 
-. Order oversight and dispute resolution
+     . Order oversight and dispute resolution
 
-. Product moderation
+     . Product moderation
 
-. Manage coupon codes and site settings
+     . Manage coupon codes and site settings
 
 
 API Architecture:
 
 User Routes:
+
 POST   /api/users/register
+
 
 POST   /api/users/login
 
+
 GET    /api/users/profile
 
+
 PUT    /api/users/update
+
 
 POST   /api/users/addresses
 
 
+
 Shop (Vendor) Routes:
+
 
 POST   /api/shops/create
 
+
 POST   /api/shops/login
+
 
 GET    /api/shops/:id
 
+
 PUT    /api/shops/update
+
 
 GET    /api/shops/dashboard
 
@@ -120,47 +134,70 @@ GET    /api/shops/dashboard
 
 Product Routes:
 
+
 POST   /api/products/create
+
 
 GET    /api/products
 
+
 GET    /api/products/:id
+
 
 PUT    /api/products/:id
 
+
 DELETE /api/products/:id
+
 
 GET    /api/products/shop/:shopId
 
 
+
 Order Routes:
+
 
 POST   /api/orders/create
 
+
 GET    /api/orders/user
+
 
 GET    /api/orders/shop
 
+
 GET    /api/orders/:id
+
 
 PUT    /api/orders/:id/status
 
 
+
 Payment:
+
 
 POST /api/payments/process
 
+
 POST /api/payments/webhook
+
+
 
 Coupon and Refund:
 
+
 POST   /api/coupons/create
+
 
 POST   /api/coupons/validate
 
+
 DELETE /api/coupons/:id
 
+
 POST   /api/refunds/create
+
+
 
 Messaging & Withdrawals:
 
@@ -262,6 +299,7 @@ Central Redux store
 ESLint + Prettier config
 
 Clear README with setup instructions
+
 
 
 
