@@ -27,7 +27,7 @@ Primary Goals:
 System Architecture:
 
 
-Layer	                                                                                             Technology	                                                             Notes
+Layer	                             Technology	                           Notes
 
 
 Frontend	             +         React (likely Vite or CRA)	     +       Component-based UI
@@ -45,7 +45,7 @@ Authentication       	+            JWT (httpOnly cookies)	      +             Ro
 State Mgmt	          +                    Redux	              +                 Frontend state
 
 
-File Storage	        +                 Cloudinary	            +               Product images
+File Storage         +                 Cloudinary	            +               Product images
 
 
 Payments	            +                    Stripe	              +                Secure checkout
@@ -111,39 +111,39 @@ API Architecture:
 
 User Routes:
 
-POST   /api/users/register
+
+     .POST   /api/users/register
 
 
-POST   /api/users/login
+     .POST   /api/users/login
 
 
-GET    /api/users/profile
+    .GET    /api/users/profile
 
 
-PUT    /api/users/update
+     .PUT    /api/users/update
 
 
-POST   /api/users/addresses
+    .POST   /api/users/addresses
 
 
 
 
 Shop (Vendor) Routes:
 
-
-POST   /api/shops/create
-
-
-POST   /api/shops/login
+    . POST   /api/shops/create
 
 
-GET    /api/shops/:id
+    . POST   /api/shops/login
 
 
-PUT    /api/shops/update
+    .GET    /api/shops/:id
 
 
-GET    /api/shops/dashboard
+    .PUT    /api/shops/update
+
+
+    .GET    /api/shops/dashboard
 
 
 
@@ -151,41 +151,41 @@ GET    /api/shops/dashboard
 Product Routes:
 
 
-POST   /api/products/create
+    .POST   /api/products/create
 
 
-GET    /api/products
+    .GET    /api/products
 
 
-GET    /api/products/:id
+    .GET    /api/products/:id
 
 
-PUT    /api/products/:id
+    .PUT    /api/products/:id
 
 
-DELETE /api/products/:id
+    .DELETE /api/products/:id
 
 
-GET    /api/products/shop/:shopId
+    .GET    /api/products/shop/:shopId
 
 
 
 Order Routes:
 
 
-POST   /api/orders/create
+    .POST   /api/orders/create
 
 
-GET    /api/orders/user
+    .GET    /api/orders/user
 
 
-GET    /api/orders/shop
+    .GET    /api/orders/shop
 
 
-GET    /api/orders/:id
+    . GET    /api/orders/:id
 
 
-PUT    /api/orders/:id/status
+    .PUT    /api/orders/:id/status
 
 
 
@@ -193,37 +193,38 @@ PUT    /api/orders/:id/status
 Payment:
 
 
-POST /api/payments/process
+     .POST /api/payments/process
 
 
-POST /api/payments/webhook
+    .POST /api/payments/webhook
+
 
 
 
 Coupon and Refund:
 
 
-POST   /api/coupons/create
+     .POST   /api/coupons/create
 
 
-POST   /api/coupons/validate
+     .POST   /api/coupons/validate
 
 
-DELETE /api/coupons/:id
+    .DELETE /api/coupons/:id
 
 
-POST   /api/refunds/create
+    .POST   /api/refunds/create
 
 
 
 
 Messaging & Withdrawals:
 
-POST   /api/conversations/create
+    .POST   /api/conversations/create
 
-POST   /api/messages/send
+    .POST   /api/messages/send
 
-POST   /api/withdrawals/create
+    .POST   /api/withdrawals/create
 
 
 
@@ -280,23 +281,24 @@ Vendor logs in
 
 
 
-Challenges & Solutions (Expected for Multi-Vendor Projects):
+Challenges & Solutions:
 
-Challenge	 
-Solution	
-Tradeoffs
+Challenge	                             Solution	              Tradeoffs
 
-Multi-vendor order tracking
-Split orders per vendor
-More complex cart logic
+Multi-vendor order tracking       Split orders per vendor           More complex cart logic
 
-Scalability of image uploads
-Cloudinary
-External cost dependency
 
-State complexity	Redux	Boilerplate + learning curve
-Payment security	Stripe + server logic	Stripe fees apply
-Role-based auth	JWT with middleware	Must handle token refresh
+Scalability of image uploads          Cloudinary                External cost dependency
+
+
+State complexity	Redux Boilerplate                         learning curve
+
+
+Payment security	Stripe + server logic                     Stripe fees apply
+
+
+Role-based auth	JWT with middleware	                    Must handle token refresh
+
 
 
 Best Practices:
@@ -330,6 +332,7 @@ Developer Experience:
 . ESLint + Prettier config
 
 . Clear README with setup instructions
+
 
 
 
