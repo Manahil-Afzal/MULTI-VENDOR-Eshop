@@ -6,6 +6,7 @@ Name: Multi-Vendor E-Shop
 One-liner: A scalable multi-vendor marketplace that allows sellers to list products and buyers to shop seamlessly across vendors.
 Repo: https://github.com/Manahil-Afzal/MULTI-VENDOR-Eshop
 
+
 Goals of the Project
 
 Primary Goals:
@@ -58,24 +59,24 @@ Primary Goals:
 
 Key Features: 
 
-                  Vendor Management:
+Vendor Management:
 
-                         . Vendor sign-up / shop creation
+     . Vendor sign-up / shop creation
 
-                         . Product CRUD with image uploads
+     . Product CRUD with image uploads
 
-                         . Inventory management
+     . Inventory management
 
-                         . Earnings overview dashboard
+     . Earnings overview dashboard
 
-                         . Coupon creation and management
+     . Coupon creation and management
 
-                         . Messaging inbox for buyers
-
-
+     . Messaging inbox for buyers
 
 
-      Buyer Experience:
+
+
+Buyer Experience:
 
     . User registration and login
 
@@ -91,7 +92,7 @@ Key Features:
 
 
 
-     Admin Capabilities:
+Admin Capabilities:
 
      . Dashboard with platform analytics
 
@@ -105,7 +106,7 @@ Key Features:
 
 
 
-    API Architecture:
+API Architecture:
 
 
     User Routes:
@@ -250,7 +251,7 @@ Key Features:
 
 
 Key User Flows:
-               Buyer Purchase Flow
+        Buyer Purchase Flow
 
        1) Browse home page or categories
 
@@ -332,6 +333,7 @@ Key User Flows:
           . ESLint + Prettier config
 
           . Clear README with setup instructions
+
 
 
 
