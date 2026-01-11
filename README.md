@@ -24,58 +24,58 @@ Primary Goals:
 
 
 
-System Architecture:
+        . System Architecture:
 
 
-Layer	                             Technology	                           Notes
+                Layer	                       Technology	                         Notes
 
 
-Frontend	             +         React (likely Vite or CRA)	     +       Component-based UI
+                Frontend	        +         React (likely Vite or CRA)	 +       Component-based UI
 
 
-Backend	               +               Node.js + Express	      +          REST API
+                Backend	        +               Node.js + Express	            +          REST API
 
 
-Database	             +             MongoDB + Mongoose	        +       Flexible schema for users, shops, orders
+                Database	        +             MongoDB + Mongoose	            +       Flexible schema for users, shops, orders
 
 
-Authentication       	+            JWT (httpOnly cookies)	      +             Role-based access
+                Authentication          +            JWT (httpOnly cookies)	            +           Role-based access
 
 
-State Mgmt	          +                    Redux	              +                 Frontend state
+                State Mgmt	        +                    Redux	            +           Frontend state
 
 
-File Storage         +                 Cloudinary	            +               Product images
+                 File Storage            +                 Cloudinary	            +               Product images
 
 
-Payments	            +                    Stripe	              +                Secure checkout
+                 Payments	        +                    Stripe	            +                Secure checkout
 
 
-Realtime	             +           Socket.io or similar	        +        (If implemented) Messaging/notifications
+                 Realtime	        +           Socket.io or similar	            +        (If implemented) Messaging/notifications
 
            
 
 
 Key Features: 
 
-Vendor Management
+                  Vendor Management:
 
-    . Vendor sign-up / shop creation
+                         . Vendor sign-up / shop creation
 
-    . Product CRUD with image uploads
+                         . Product CRUD with image uploads
 
-    . Inventory management
+                         . Inventory management
 
-    . Earnings overview dashboard
+                         . Earnings overview dashboard
 
-    . Coupon creation and management
+                         . Coupon creation and management
 
-    . Messaging inbox for buyers
-
-
+                         . Messaging inbox for buyers
 
 
-Buyer Experience:
+
+
+      Buyer Experience:
 
     . User registration and login
 
@@ -91,8 +91,7 @@ Buyer Experience:
 
 
 
-
-Admin Capabilities:
+     Admin Capabilities:
 
      . Dashboard with platform analytics
 
@@ -106,10 +105,10 @@ Admin Capabilities:
 
 
 
-API Architecture:
+    API Architecture:
 
 
-User Routes:
+    User Routes:
 
 
      .POST   /api/users/register
@@ -118,7 +117,7 @@ User Routes:
      .POST   /api/users/login
 
 
-    .GET    /api/users/profile
+     .GET    /api/users/profile
 
 
      .PUT    /api/users/update
@@ -129,7 +128,7 @@ User Routes:
 
 
 
-Shop (Vendor) Routes:
+    Shop (Vendor) Routes:
 
     . POST   /api/shops/create
 
@@ -148,7 +147,7 @@ Shop (Vendor) Routes:
 
 
 
-Product Routes:
+    Product Routes:
 
 
     .POST   /api/products/create
@@ -170,7 +169,7 @@ Product Routes:
 
 
 
-Order Routes:
+    Order Routes:
 
 
     .POST   /api/orders/create
@@ -190,7 +189,7 @@ Order Routes:
 
 
 
-Payment:
+    Payment:
 
 
      .POST /api/payments/process
@@ -201,7 +200,7 @@ Payment:
 
 
 
-Coupon and Refund:
+     Coupon and Refund:
 
 
      .POST   /api/coupons/create
@@ -218,7 +217,7 @@ Coupon and Refund:
 
 
 
-Messaging & Withdrawals:
+     Messaging & Withdrawals:
 
     .POST   /api/conversations/create
 
@@ -228,60 +227,60 @@ Messaging & Withdrawals:
 
 
 
-Database Design:
+    Database Design:
 
-. Usually core collections include:
+          . Usually core collections include:
 
-. Users (buyers, sellers, admins)
+          . Users (buyers, sellers, admins)
 
-. Shops (vendor profiles)
+          . Shops (vendor profiles)
 
-. Products
+          . Products
 
-. Orders
+          . Orders
 
-. Coupons / Discounts
+          . Coupons / Discounts
 
-. Messages / Conversations
+          . Messages / Conversations
 
-. Withdrawals
+          . Withdrawals
 
-. Refunds
+          . Refunds
 
 
 
 Key User Flows:
-Buyer Purchase Flow
+               Buyer Purchase Flow
 
-1) Browse home page or categories
+       1) Browse home page or categories
 
-2) Filter/search products
+       2) Filter/search products
 
-3) Add items to cart
+       3) Add items to cart
 
-4) Checkout with address and payment
+       4) Checkout with address and payment
 
-5) Place order and receive confirmation
-
-
-
-
-Vendor Product Management Flow:
-
-Vendor logs in
-
-1) Adds product with details
-
-2) Manages inventory and prices
-
-3) Views orders and earnings
-
-4) Handles coupons and refunds
+       5) Place order and receive confirmation
 
 
 
 
-Challenges & Solutions:
+     Vendor Product Management Flow:
+
+      Vendor logs in:
+
+      1) Adds product with details
+
+      2) Manages inventory and prices
+
+      3) Views orders and earnings
+
+      4) Handles coupons and refunds
+
+
+
+
+    Challenges & Solutions:
 
      .Challenge	                             Solution	              Tradeoffs
 
@@ -333,6 +332,7 @@ Challenges & Solutions:
           . ESLint + Prettier config
 
           . Clear README with setup instructions
+
 
 
 
