@@ -2,6 +2,7 @@ Multi-Vendor E-Shop
 Project Overview
 
 Name: Multi-Vendor E-Shop
+
 One-liner: A scalable multi-vendor marketplace that allows sellers to list products and buyers to shop seamlessly across vendors.
 Repo: https://github.com/Manahil-Afzal/MULTI-VENDOR-Eshop
 
@@ -215,3 +216,4 @@ Central Redux store
 ESLint + Prettier config
 
 Clear README with setup instructions
+
