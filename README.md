@@ -74,6 +74,7 @@ Vendor Management
 
 
 
+
 Buyer Experience:
 
     . User registration and login
@@ -90,6 +91,7 @@ Buyer Experience:
 
 
 
+
 Admin Capabilities:
 
      . Dashboard with platform analytics
@@ -103,7 +105,9 @@ Admin Capabilities:
      . Manage coupon codes and site settings
 
 
+
 API Architecture:
+
 
 User Routes:
 
@@ -123,6 +127,7 @@ POST   /api/users/addresses
 
 
 
+
 Shop (Vendor) Routes:
 
 
@@ -139,6 +144,7 @@ PUT    /api/shops/update
 
 
 GET    /api/shops/dashboard
+
 
 
 
@@ -183,6 +189,7 @@ PUT    /api/orders/:id/status
 
 
 
+
 Payment:
 
 
@@ -209,6 +216,7 @@ POST   /api/refunds/create
 
 
 
+
 Messaging & Withdrawals:
 
 POST   /api/conversations/create
@@ -216,6 +224,7 @@ POST   /api/conversations/create
 POST   /api/messages/send
 
 POST   /api/withdrawals/create
+
 
 
 Database Design:
@@ -253,6 +262,9 @@ Buyer Purchase Flow
 
 5) Place order and receive confirmation
 
+
+
+
 Vendor Product Management Flow:
 
 Vendor logs in
@@ -264,6 +276,9 @@ Vendor logs in
 3) Views orders and earnings
 
 4) Handles coupons and refunds
+
+
+
 
 Challenges & Solutions (Expected for Multi-Vendor Projects):
 
@@ -284,31 +299,38 @@ Payment security	Stripe + server logic	Stripe fees apply
 Role-based auth	JWT with middleware	Must handle token refresh
 
 
-Best Practices (Include in your documentation)
+Best Practices:
 
-Secure authentication (bcrypt + JWT + httpOnly cookies)
+. Secure authentication (bcrypt + JWT + httpOnly cookies)
 
-Role-based access control middleware
 
-Input validation on backend + frontend
+. Role-based access control middleware
 
-Use environment variables (no sensitive data in code)
 
-Pagination for product lists
+. Input validation on backend + frontend
 
-MongoDB indexing for performance
 
-Developer Experience
+. Use environment variables (no sensitive data in code)
 
-Modular MVC folder structure (controllers, routes, models)
 
-Reusable UI components
+. Pagination for product lists
 
-Central Redux store
 
-ESLint + Prettier config
+. MongoDB indexing for performance
 
-Clear README with setup instructions
+
+Developer Experience:
+
+. Modular MVC folder structure (controllers, routes, models)
+
+. Reusable UI components
+
+. Central Redux store
+
+. ESLint + Prettier config
+
+. Clear README with setup instructions
+
 
 
 
