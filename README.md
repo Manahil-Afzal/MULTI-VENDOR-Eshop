@@ -1,4 +1,5 @@
-Multi-Vendor E-Shop — Case Study
+Multi-Vendor E-Shop 
+
 Project Overview
 
 Name: Multi-Vendor E-Shop
@@ -20,4 +21,5 @@ Primary Goals:
 5) Build dashboards for buyers, sellers, and administrators.
 
 6) Support coupon codes and basic promotion flows.
+
 
