@@ -22,4 +22,14 @@ Primary Goals:
 
 6) Support coupon codes and basic promotion flows.
 
-
+System Architecture:
+\
+Layer	                           Technology	                               Notes
+Frontend	                 React (likely Vite or CRA)	                Component-based UI
+Backend	                   Node.js + Express	                            REST API
+Database	                    MongoDB + Mongoose	            Flexible schema for users, shops, orders
+Authentication	            JWT (httpOnly cookies)	                   Role-based access
+State Mgmt	                        Redux	                               Frontend state
+File Storage	                    Cloudinary	                           Product images
+Payments	                          Stripe	                             Secure checkout
+Realtime	                 Socket.io or similar	               (If implemented) Messaging/notifications
