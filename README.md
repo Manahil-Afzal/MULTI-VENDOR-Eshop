@@ -16,6 +16,7 @@ Name: Vendly Multi-Vendor E-commerce Platform
 
 Goals of the Project:
 
+
 1) Enable multiple vendors to register, manage their shops, and upload products.
 
 2) Provide customers with a unified browsing and checkout experience.
@@ -31,7 +32,7 @@ Goals of the Project:
 
 
 
-        . System Architecture:
+. System Architecture:
 
 
                 Layer	                       Technology	                         Notes
@@ -40,25 +41,25 @@ Goals of the Project:
                 Frontend	        +         React (likely Vite or CRA)	 +       Component-based UI
 
 
-                Backend	                +         Node.js + Express	         +          REST API
+                Backend	          +         Node.js + Express	           +          REST API
 
 
-                Database	        +         MongoDB + Mongoose	         +    Flexible schema for users, shops, orders
+                Database	        +         MongoDB + Mongoose	         +      Flexible schema for users, shops, orders
 
 
-                Authentication          +         JWT (httpOnly cookies)	 +        Role-based access
+                Authentication    +         JWT (httpOnly cookies)	     +        Role-based access
 
 
-                State Mgmt	        +                Redux	                 +        Frontend state
+                State Mgmt	      +                Redux	               +        Frontend state
 
 
-                 File Storage           +                 Cloudinary	         +        Product images
+                 File Storage     +             Cloudinary	             +        Product images
 
 
-                 Payments	        +                    Stripe	         +        Secure checkout
+                 Payments	        +                Stripe	               +        Secure checkout
 
 
-                 Realtime	        +           Socket.io or similar	 +        (If implemented) Messaging/notifications
+                 Realtime	        +           Socket.io or similar	     +        (If implemented) Messaging/notifications
 
            
 
@@ -368,6 +369,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
