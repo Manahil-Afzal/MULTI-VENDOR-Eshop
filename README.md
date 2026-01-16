@@ -1,4 +1,4 @@
-                                                  𝐕𝐞𝐧𝐝𝐥𝐲 𝐌𝐮𝐥𝐭𝐢-𝐕𝐞𝐧𝐝𝐨𝐫 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 - 𝐂𝐚𝐬𝐞 𝐒𝐭𝐮𝐝𝐲
+                                                  E-Shop 𝐌𝐮𝐥𝐭𝐢-𝐕𝐞𝐧𝐝𝐨𝐫 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 - 𝐂𝐚𝐬𝐞 𝐒𝐭𝐮𝐝𝐲
 
                                                                     𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝑶𝒗𝒆𝒓𝒗𝒊𝒆𝒘
 
@@ -38,28 +38,37 @@
                 Layer	                       Technology	                         Notes
 
 
-                Frontend	        +         React (likely Vite or CRA)	 +       Component-based UI
+                Frontend	        +         React (likely Vite or CRA)	 +       Vite	Fast dev experience, component-based UI with hooks
 
 
-                Backend	          +         Node.js + Express	           +          REST API
+                Backend	          +         Node.js + Express	           +       Predictable state management for cart, user, products, orders
 
 
-                Database	       +         MongoDB + Mongoose	         +      Flexible schema for users, shops, orders
+                Database	       +         MongoDB + Mongoose	         +          Utility-first approach for rapid, consistent UI development
 
 
-                Authentication    +         JWT (httpOnly cookies)	     +        Role-based access
+                Authentication    +         JWT (httpOnly cookies)	     +         RESTful API architecture, middleware-based authentication
 
 
-                State Mgmt	      +                Redux	               +        Frontend state
+                State Mgmt	      +                Redux	               +         NoSQL flexibility for product variants, vendor schemas
 
 
-                 File Storage     +             Cloudinary	             +        Product images
+                 File Storage     +             Cloudinary	             +         Cloud-based image optimization and CDN delivery
 
 
-                 Payments	      +                Stripe	               +        Secure checkout
+                 Payments	      +                Stripe	               +           Secure payment processing with webhook support
 
 
-                 Realtime	      +           Socket.io or similar	     +        (If implemented) Messaging/notifications
+                 Realtime	      +           Socket.io or similar	     +           Real-time messaging between buyers and vendors
+
+
+                 Email	        +               Nodemailer	           +            Transactional emails for orders, activation, notifications
+
+
+                Styling	        +               Tailwind CSS	         +            Utility-first approach for rapid, consistent UI development
+
+
+
 
            
 
@@ -234,31 +243,9 @@ API Architecture:
     .POST   /api/withdrawals/create
 
 
+𝐊𝐞𝐲 𝐔𝐬𝐞𝐫 𝐅𝐥𝐨𝐰𝐬:
 
-    Database Design:
-
-          . Usually core collections include:
-
-          . Users (buyers, sellers, admins)
-
-          . Shops (vendor profiles)
-
-          . Products
-
-          . Orders
-
-          . Coupons / Discounts
-
-          . Messages / Conversations
-
-          . Withdrawals
-
-          . Refunds
-
-
-
-Key User Flows:
-        Buyer Purchase Flow
+  Buyer Purchase Flow
 
        1) Browse home page or categories
 
@@ -369,6 +356,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
