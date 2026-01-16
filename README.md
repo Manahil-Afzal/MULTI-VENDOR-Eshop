@@ -12,8 +12,8 @@ Name: Vendly Multi-Vendor E-commerce Platform
 
 
 
-Goals of the Project:
 
+Goals of the Project:
 
 1) Enable multiple vendors to register, manage their shops, and upload products.
 
@@ -367,6 +367,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
