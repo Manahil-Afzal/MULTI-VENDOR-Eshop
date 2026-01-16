@@ -1,4 +1,4 @@
-𝐕𝐞𝐧𝐝𝐥𝐲 𝐌𝐮𝐥𝐭𝐢-𝐕𝐞𝐧𝐝𝐨𝐫 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 - 𝐂𝐚𝐬𝐞 𝐒𝐭𝐮𝐝𝐲
+                                                                𝐕𝐞𝐧𝐝𝐥𝐲 𝐌𝐮𝐥𝐭𝐢-𝐕𝐞𝐧𝐝𝐨𝐫 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 - 𝐂𝐚𝐬𝐞 𝐒𝐭𝐮𝐝𝐲
 
 𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝑶𝒗𝒆𝒓𝒗𝒊𝒆𝒘
 
@@ -9,6 +9,7 @@ Name: Vendly Multi-Vendor E-commerce Platform
   . Repo: https://github.com/Manahil-Afzal/MULTI-VENDOR-Eshop
 
   . Live Demo: https://multi-vendor-e-shop-frontend.vercel.app
+
 
 
 
@@ -367,6 +368,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
