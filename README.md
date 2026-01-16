@@ -1,8 +1,9 @@
-                                                                𝐕𝐞𝐧𝐝𝐥𝐲 𝐌𝐮𝐥𝐭𝐢-𝐕𝐞𝐧𝐝𝐨𝐫 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 - 𝐂𝐚𝐬𝐞 𝐒𝐭𝐮𝐝𝐲
+                                                  𝐕𝐞𝐧𝐝𝐥𝐲 𝐌𝐮𝐥𝐭𝐢-𝐕𝐞𝐧𝐝𝐨𝐫 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 - 𝐂𝐚𝐬𝐞 𝐒𝐭𝐮𝐝𝐲
 
-𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝑶𝒗𝒆𝒓𝒗𝒊𝒆𝒘
+                                                                    𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝑶𝒗𝒆𝒓𝒗𝒊𝒆𝒘
 
-Name: Vendly Multi-Vendor E-commerce Platform
+                                                       Name: Vendly Multi-Vendor E-commerce Platform
+                                                       
 
   . One-liner: A scalable multi-vendor marketplace that allows sellers to list products and buyers to shop seamlessly across vendors.
 
@@ -43,7 +44,7 @@ Name: Vendly Multi-Vendor E-commerce Platform
                 Backend	          +         Node.js + Express	           +          REST API
 
 
-                Database	        +         MongoDB + Mongoose	         +      Flexible schema for users, shops, orders
+                Database	       +         MongoDB + Mongoose	         +      Flexible schema for users, shops, orders
 
 
                 Authentication    +         JWT (httpOnly cookies)	     +        Role-based access
@@ -55,10 +56,10 @@ Name: Vendly Multi-Vendor E-commerce Platform
                  File Storage     +             Cloudinary	             +        Product images
 
 
-                 Payments	        +                Stripe	               +        Secure checkout
+                 Payments	      +                Stripe	               +        Secure checkout
 
 
-                 Realtime	        +           Socket.io or similar	     +        (If implemented) Messaging/notifications
+                 Realtime	      +           Socket.io or similar	     +        (If implemented) Messaging/notifications
 
            
 
@@ -368,6 +369,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
