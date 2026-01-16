@@ -1,6 +1,6 @@
-Vendly Multi-Vendor E-commerce Platform - Case Study
+𝐕𝐞𝐧𝐝𝐥𝐲 𝐌𝐮𝐥𝐭𝐢-𝐕𝐞𝐧𝐝𝐨𝐫 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 - 𝐂𝐚𝐬𝐞 𝐒𝐭𝐮𝐝𝐲
 
-Project Overview
+𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝑶𝒗𝒆𝒓𝒗𝒊𝒆𝒘
 
 Name: Vendly Multi-Vendor E-commerce Platform
 
@@ -12,9 +12,7 @@ Name: Vendly Multi-Vendor E-commerce Platform
 
 
 
-
-
-Goals of the Project:
+𝐆𝐨𝐚𝐥𝐬 𝐨𝐟 𝐭𝐡𝐞 𝐏𝐫𝐨𝐣𝐞𝐜𝐭:
 
 
 1) Enable multiple vendors to register, manage their shops, and upload products.
@@ -32,7 +30,7 @@ Goals of the Project:
 
 
 
-. System Architecture:
+𝑺𝒚𝒔𝒕𝒆𝒎 𝑨𝒓𝒄𝒉𝒊𝒕𝒆𝒄𝒕𝒖𝒓𝒆:
 
 
                 Layer	                       Technology	                         Notes
@@ -64,7 +62,7 @@ Goals of the Project:
            
 
 
-Key Features: 
+𝐊𝐞𝐲 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬: 
 
 Vendor Management:
 
@@ -369,6 +367,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
