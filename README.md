@@ -165,6 +165,17 @@ API Architecture:
     .GET    /api/shops/dashboard - Shop analytics
 
 
+    Event Management:
+   
+      POST /api/events/create - Create promotional event
+          
+      GET /api/events - List active events
+          
+      GET /api/events/:id - Get event details
+          
+      PUT /api/events/:id - Update event
+          
+      DELETE /api/events/:id - Delete event
 
 
     Product Routes:
@@ -366,6 +377,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
