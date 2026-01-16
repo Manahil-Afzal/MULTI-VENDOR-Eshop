@@ -128,38 +128,41 @@ API Architecture:
     User Routes:
 
 
-     .POST   /api/users/register
+     .POST   /api/users/register - User registration
 
 
-     .POST   /api/users/login
+     .POST /api/users/activate - Email activation
 
 
-     .GET    /api/users/profile
+     .POST   /api/users/login - User authentication
 
 
-     .PUT    /api/users/update
+     .GET    /api/users/profile - Get user profile
 
 
-    .POST   /api/users/addresses
+     .PUT    /api/users/update - Update user details
+
+
+     .POST   /api/users/addresses - Manage shipping addresses
 
 
 
 
     Shop (Vendor) Routes:
 
-    . POST   /api/shops/create
+    . POST   /api/shops/create- Shop registration
 
 
-    . POST   /api/shops/login
+    . POST   /api/shops/login - Vendor authentication
 
 
-    .GET    /api/shops/:id
+    .GET    /api/shops/:id - Get shop details
 
 
-    .PUT    /api/shops/update
+    .PUT    /api/shops/update - Update shop information
 
 
-    .GET    /api/shops/dashboard
+    .GET    /api/shops/dashboard - Shop analytics
 
 
 
@@ -167,41 +170,41 @@ API Architecture:
     Product Routes:
 
 
-    .POST   /api/products/create
+    .POST   /api/products/create- Create product (seller auth)
 
 
-    .GET    /api/products
+    .GET    /api/products - List all products with filters
 
 
-    .GET    /api/products/:id
+    .GET    /api/products/:id - Get product details
 
 
-    .PUT    /api/products/:id
+    .PUT    /api/products/:id - Update product (seller auth)
 
 
-    .DELETE /api/products/:id
+    .DELETE /api/products/:id - Delete product (seller auth)
 
 
-    .GET    /api/products/shop/:shopId
+    .GET    /api/products/shop/:shopId - Get shop products
 
 
 
     Order Routes:
 
 
-    .POST   /api/orders/create
+    .POST   /api/orders/create- Place order
 
 
-    .GET    /api/orders/user
+    .GET    /api/orders/user- Get user orders
 
 
-    .GET    /api/orders/shop
+    .GET    /api/orders/shop - Get shop orders
 
 
-    . GET    /api/orders/:id
+    . GET    /api/orders/:id - Get order details
 
 
-    .PUT    /api/orders/:id/status
+    .PUT    /api/orders/:id/status - Update order status
 
 
 
@@ -209,38 +212,45 @@ API Architecture:
     Payment:
 
 
-     .POST /api/payments/process
+     .POST /api/payments/process - Process Stripe payment
 
 
-    .POST /api/payments/webhook
+    .POST /api/payments/webhook - Stripe webhook handler
 
 
 
 
-     Coupon and Refund:
+     Coupon  Management:
+
+       POST /api/coupons/create - Create coupon
+    
+       GET /api/coupons/shop/:shopId - Get shop coupons
+
+       POST /api/coupons/validate - Validate coupon code
+    
+       DELETE /api/coupons/:id - Delete coupon
 
 
-     .POST   /api/coupons/create
-
-
-     .POST   /api/coupons/validate
-
-
-    .DELETE /api/coupons/:id
-
-
-    .POST   /api/refunds/create
-
-
+    Refund Management:
+    
+       POST /api/refunds/create - Request refund
+       
+       GET /api/refunds/user - Get user refunds
+       
+       GET /api/refunds/shop - Get shop refund requests
+       
+       PUT /api/refunds/:id/status - Update refund status
 
 
      Messaging & Withdrawals:
 
-    .POST   /api/conversations/create
-
-    .POST   /api/messages/send
-
-    .POST   /api/withdrawals/create
+    POST /api/conversations/create - Start conversation
+    
+    GET /api/conversations - List user conversations
+    
+    POST /api/messages/send - Send message
+    
+    GET /api/messages/:conversationId - Get conversation messages
 
 
 𝐊𝐞𝐲 𝐔𝐬𝐞𝐫 𝐅𝐥𝐨𝐰𝐬:
@@ -356,6 +366,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
