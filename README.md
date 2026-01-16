@@ -1,4 +1,4 @@
-#Vendly Multi-Vendor E-commerce Platform - Case Study
+  ###Vendly Multi-Vendor E-commerce Platform - Case Study
 
 #Project Overview
 
@@ -368,6 +368,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
