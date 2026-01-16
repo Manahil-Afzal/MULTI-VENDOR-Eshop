@@ -6,13 +6,12 @@ Name: Multi-Vendor E-Shop
 One-liner: A scalable multi-vendor marketplace that allows sellers to list products and buyers to shop seamlessly across vendors.
 
 Repo: https://github.com/Manahil-Afzal/MULTI-VENDOR-Eshop
+
 Live Demo: https://multi-vendor-e-shop-frontend.vercel.app
 
 
-Goals of the Project
+Goals of the Project:
 
-
-Primary Goals:
 
 1) Enable multiple vendors to register, manage their shops, and upload products.
 
@@ -25,6 +24,7 @@ Primary Goals:
 5) Build dashboards for buyers, sellers, and administrators.
 
 6) Support coupon codes and basic promotion flows.
+
 
 
 
@@ -365,6 +365,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
