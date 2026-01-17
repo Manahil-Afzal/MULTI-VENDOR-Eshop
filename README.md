@@ -1,8 +1,8 @@
- E-Shop 𝐌𝐮𝐥𝐭𝐢-𝐕𝐞𝐧𝐝𝐨𝐫 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 - 𝐂𝐚𝐬𝐞 𝐒𝐭𝐮𝐝𝐲
+                                              E-Shop 𝐌𝐮𝐥𝐭𝐢-𝐕𝐞𝐧𝐝𝐨𝐫 𝐄-𝐜𝐨𝐦𝐦𝐞𝐫𝐜𝐞 𝐏𝐥𝐚𝐭𝐟𝐨𝐫𝐦 - 𝐂𝐚𝐬𝐞 𝐒𝐭𝐮𝐝𝐲
 
-                                                                    𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝑶𝒗𝒆𝒓𝒗𝒊𝒆𝒘
+                                                              𝑷𝒓𝒐𝒋𝒆𝒄𝒕 𝑶𝒗𝒆𝒓𝒗𝒊𝒆𝒘
 
-                                                       Name: Vendly Multi-Vendor E-commerce Platform
+                                              Name: Vendly Multi-Vendor E-commerce Platform
                                                        
 
   . One-liner: A scalable multi-vendor marketplace that allows sellers to list products and buyers to shop seamlessly across vendors.
@@ -349,6 +349,7 @@ Key Takeaways:
     .Multi-vendor order splitting adds complexity but is essential for marketplace functionality
     
     .Middleware architecture in Express.js enables clean separation of concerns
+
 
 
 
